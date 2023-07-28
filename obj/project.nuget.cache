@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B4nl+xd5/zk4ze71CbQu1wKSL3xpJ0G9T8Y7rtMGbkACGMRZqd4lWj6mm585yjGz936FpV42rsRpMFuqFl2HAA==",
+  "dgSpecHash": "kWvNPI8cM4asPFbC7MiDolwVwnYnNe36hJQkjX19QA5i5HWRS60B3Li9on9HltVbgxE9/HDlPjk1GKEb4nURwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj",
+  "projectFilePath": "c:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bouzid\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bouzid\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.20\\microsoft.data.sqlite.core.6.0.20.nupkg.sha512",
