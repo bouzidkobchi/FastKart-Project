@@ -12,7 +12,8 @@
         public List<Product> WishList { get; set; }
         public List<Order> Orders { get; set; }
         public List<Role> Roles { get; set; }
-        public List<Blog> Blogs { get; set; }
+        // public List<Role> CreatedRoles { get; set; }
+        public List<Blog> CreatedBlogs { get; set; }
         public List<Card> Cards { get; set; }
         public List<Address> Addresses { get; set; }
         public List<Media> Pictures { get; set; }

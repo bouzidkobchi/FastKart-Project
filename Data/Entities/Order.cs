@@ -1,4 +1,6 @@
-﻿namespace FastKart.Data.Entities
+﻿using FastKart.Data.Enums;
+
+namespace FastKart.Data.Entities
 {
     public class Order
     {
@@ -9,8 +11,8 @@
         public Product Product { get; set; }
         public DateTime CreatedAt { get; set; }
         public int PaymentMethodId { get; set; }
-        //public PaymentMethod PaymentMethod { get; set; }
-        //public OrderStatus MyProperty { get; set; }
+        public PayementMethod PaymentMethod { get; set; }
         public float Amount { get; set; }
+        public OrderDeliveryStatus DeliveryStatus { get; set; }
     }
 }

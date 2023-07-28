@@ -2,5 +2,7 @@
 {
     public enum CouponStatus
     {
+        Restitute,
+        Success
     }
 }
