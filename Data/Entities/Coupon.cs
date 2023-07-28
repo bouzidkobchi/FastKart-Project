@@ -2,7 +2,6 @@
 
 namespace FastKart.Data.Entities
 {
-    // done
     public class Coupon
     {
         public string Code { get; set; }
