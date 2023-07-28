@@ -1,0 +1,17 @@
+﻿Not Finished Classes :
+	- Order
+	- Product
+	- Rating
+	- Role
+	- Store
+	- User
+	- PaymentMethod (Not Created Yet)
+	- WeightChoice (Not Created Yet)
+
+- All Enums (Not Created / Implemented Yet)
+
+- Entities Configuration
+
+- Entities CRUD Extension Methods
+
+- Configure Sqlite For Development / Sql Server for Production

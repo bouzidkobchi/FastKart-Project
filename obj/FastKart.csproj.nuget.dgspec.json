@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj": {}
+    "C:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj": {}
   },
   "projects": {
-    "c:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj": {
+    "C:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj",
+        "projectUniqueName": "C:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj",
         "projectName": "FastKart",
-        "projectPath": "c:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj",
+        "projectPath": "C:\\Users\\bouzid\\Desktop\\FastKart\\FastKart.csproj",
         "packagesPath": "C:\\Users\\bouzid\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\bouzid\\Desktop\\FastKart\\obj\\",
+        "outputPath": "C:\\Users\\bouzid\\Desktop\\FastKart\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bouzid\\AppData\\Roaming\\NuGet\\NuGet.Config",
