@@ -4,83 +4,83 @@ using System.Data;
 
 namespace FastKart.Data.EntitiesConfiguration
 {
-    public static class UserTable
+    public static class UserConfig
     {
-        public static ModelBuilder AddUserTable(this ModelBuilder modelBuilder)
+        public static ModelBuilder AddUserEntity(this ModelBuilder modelBuilder)
         {
-            var UserModel = modelBuilder.Entity<User>();
+            var UserEntity = modelBuilder.Entity<User>();
 
-            UserModel.HasMany<Product>(U => U.WishList)
+            UserEntity.HasMany<Product>(U => U.WishList)
                 .WithMany(P => P.Likers);
 
             // Id
-            UserModel.HasKey(U => U.Id);
+            UserEntity.HasKey(U => U.Id);
 
             // Email
-            UserModel.Property(U => U.Email)
+            UserEntity.Property(U => U.Email)
                 .IsRequired()
                 .HasMaxLength(50);
-            UserModel
+            UserEntity
                 .HasIndex(U => U.Email)
                 .IsUnique();
 
             // Username
-            UserModel.Property(U => U.UserName)
+            UserEntity.Property(U => U.UserName)
                 .IsRequired()
                 .HasMaxLength(30);
-            UserModel
+            UserEntity
                 .HasIndex(U => U.UserName)
                 .IsUnique();
 
             // Passwordhash
-            UserModel.Property(U => U.PasswordHash)
+            UserEntity.Property(U => U.PasswordHash)
                 .HasMaxLength(250);
 
             // Phone
-            UserModel.Property(U => U.Phone)
+            UserEntity.Property(U => U.Phone)
                 .IsFixedLength(true)
                 .HasMaxLength(12);
 
             // ProfilePicture
-            UserModel.HasOne(U => U.ProfilePicture);
+            UserEntity.HasOne(U => U.ProfilePicture);
 
             // WishList
-            UserModel.HasMany(U => U.WishList)
+            UserEntity.HasMany(U => U.WishList)
                 .WithMany(P => P.Likers);
 
             // Orders
-            UserModel.HasMany(U => U.Orders)
+            UserEntity.HasMany(U => U.Orders)
                 .WithOne(O => O.User);
 
             // Roles
-            UserModel.HasMany(U => U.Roles)
+            UserEntity.HasMany(U => U.Roles)
                 .WithMany(R => R.Owners);
 
             // CreatedRoles
-            UserModel.HasMany(U => U.Roles)
+            UserEntity.HasMany(U => U.Roles)
                 .WithOne(R => R.Auther);
 
             // CreatedBlogs
-            UserModel.HasMany(U => U.CreatedBlogs)
+            UserEntity.HasMany(U => U.CreatedBlogs)
                 .WithOne(B => B.Auther);
 
             // Cards
-            UserModel.HasMany(U => U.Cards)
+            UserEntity.HasMany(U => U.Cards)
                 .WithOne(C => C.User);
 
             // Addresses
-            UserModel.HasMany(U => U.Addresses)
+            UserEntity.HasMany(U => U.Addresses)
                 .WithOne(A => A.User);
 
             // Pictures
-            UserModel.HasMany(U => U.Pictures);
+            UserEntity.HasMany(U => U.Pictures);
 
             // Ratings
-            UserModel.HasMany(U => U.Ratings)
+            UserEntity.HasMany(U => U.Ratings)
                 .WithOne(R => R.User);
 
             // Coupons
-            UserModel.HasMany(U => U.Coupons)
+            UserEntity.HasMany(U => U.Coupons)
                 .WithOne(U => U.Owner);
 
             return modelBuilder;

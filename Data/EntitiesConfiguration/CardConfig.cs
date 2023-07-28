@@ -1,6 +1,6 @@
 ﻿namespace FastKart.Data.EntitiesConfiguration
 {
-    public class CategoryTable
+    public class CardConfig
     {
     }
 }

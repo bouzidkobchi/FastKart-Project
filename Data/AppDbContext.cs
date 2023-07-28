@@ -22,7 +22,7 @@ namespace FastKart.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.AddUserTable();
+            modelBuilder.AddUserEntity();
         }
 
     }
