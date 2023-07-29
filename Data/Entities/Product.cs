@@ -13,7 +13,7 @@ namespace FastKart.Data.Entities
         public Category Category { get; set; }
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
-        public int FormId { get; set; }
+        public string FormName { get; set; }
         public Form Form { get; set; }
         public int StoreId { get; set; }
         public Store Store { get; set; }

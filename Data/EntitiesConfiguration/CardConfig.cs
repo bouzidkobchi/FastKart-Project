@@ -10,9 +10,6 @@ namespace FastKart.Data.EntitiesConfiguration
         {
             var CardEntity = modelBuilder.Entity<Card>();
 
-            // Id
-            CardEntity.HasKey(C => C.Id);
-
             // User
             CardEntity.HasOne(C => C.User)
                 .WithMany(U => U.Cards);

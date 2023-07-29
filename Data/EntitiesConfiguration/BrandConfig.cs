@@ -9,9 +9,6 @@ namespace FastKart.Data.EntitiesConfiguration
         {
             var BrandEntity = modelBuilder.Entity<Brand>();
 
-            // Id
-            BrandEntity.HasKey(B => B.Id);
-
             // Name
             BrandEntity.Property(B => B.Name)
                 .IsRequired()

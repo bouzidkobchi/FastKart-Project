@@ -9,9 +9,6 @@ namespace FastKart.Data.EntitiesConfiguration
         {
             var BlogCommentEntity = modelBuilder.Entity<BlogComment>();
             
-            // Id
-            BlogCommentEntity.HasKey(C => C.Id);
-
             // Auther
             BlogCommentEntity.HasOne(C => C.Auther)
                 .WithMany(U => U.Comments);

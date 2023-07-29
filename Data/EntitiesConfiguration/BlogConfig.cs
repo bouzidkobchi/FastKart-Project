@@ -9,9 +9,6 @@ namespace FastKart.Data.EntitiesConfiguration
         {
             var BlogEntity = modelBuilder.Entity<Blog>();
 
-            // Id
-            BlogEntity.HasKey(B => B.Id);
-
             // Title
             BlogEntity.Property(B => B.Title)
                 .IsRequired()

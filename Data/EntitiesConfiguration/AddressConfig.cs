@@ -9,9 +9,6 @@ namespace FastKart.Data.EntitiesConfiguration
         {
             var AddressEntity = modelBuilder.Entity<Address>();
 
-            // Id
-            AddressEntity.HasIndex(A => A.Id);
-
             //AddressString
             AddressEntity.Property(A => A.AddressString)
                 .HasMaxLength(50)
