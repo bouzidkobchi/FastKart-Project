@@ -10,10 +10,10 @@ namespace FastKart.Data.EntitiesConfiguration
             var CategoryEntity = modelBuilder.Entity<Category>();
 
             //Name
-            CategoryEntity.Property(C => C.Name)
-                .IsRequired()
-                .HasMaxLength(20)
-                .IsFixedLength();
+            CategoryEntity.HasKey(C => C.Name);
+
+            //CategoryEntity.Property(C => C.Name)
+            //    .HasMaxLength(30);
 
             //Image
             CategoryEntity.HasOne(C => C.Image);

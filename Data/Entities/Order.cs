@@ -10,8 +10,8 @@ namespace FastKart.Data.Entities
         public int ProductId { get; set; }
         public Product Product { get; set; }
         public DateTime CreatedAt { get; set; }
-        public int PaymentMethodId { get; set; }
-        public PayementMethod PaymentMethod { get; set; }
+        public int CardId { get; set; }
+        public Card Card { get; set; }
         public float Amount { get; set; }
         public OrderDeliveryStatus DeliveryStatus { get; set; }
     }

@@ -11,11 +11,13 @@ namespace FastKart.Data.EntitiesConfiguration
             
             // Auther
             BlogCommentEntity.HasOne(C => C.Auther)
-                .WithMany(U => U.Comments);
+                .WithMany(U => U.Comments)
+                .HasForeignKey(B => B.AutherId);
 
             // Blog
             BlogCommentEntity.HasOne(C => C.Blog)
-                .WithMany(B => B.Comments);
+                .WithMany(B => B.Comments)
+                .HasForeignKey(B => B.BlogId);
 
             // Content
             BlogCommentEntity.Property(C => C.Content)

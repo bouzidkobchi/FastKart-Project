@@ -25,7 +25,9 @@ namespace FastKart.Data.EntitiesConfiguration
                 .IsRequired();
 
             // Welpaper
-            BlogEntity.HasOne(B => B.Welpaper);
+            BlogEntity.HasOne(B => B.Welpaper)
+                .WithMany()                         // (X) verify this 
+                .HasForeignKey(B => B.WelpaperId); 
 
             // comments
             BlogEntity.HasMany(B => B.Comments)

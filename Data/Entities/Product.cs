@@ -9,7 +9,7 @@ namespace FastKart.Data.Entities
         public string Discription { get; set; }
         public float OldPrice { get; set; }
         public float CurrentPrice { get; set; }
-        public int CategoryId { get; set; }
+        public string CategoryName { get; set; }
         public Category Category { get; set; }
         public int BrandId { get; set; }
         public Brand Brand { get; set; }
@@ -18,7 +18,7 @@ namespace FastKart.Data.Entities
         public int StoreId { get; set; }
         public Store Store { get; set; }
         public string PackageInfo { get; set; }
-        public int ManufactorId { get; set; }
+        public string ManufactorName { get; set; }
         public Manufactor Manufactor { get; set; }
         public string PartNumber { get; set; }
         public int NetQuantity { get; set; }

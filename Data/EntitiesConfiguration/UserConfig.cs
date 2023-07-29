@@ -57,7 +57,7 @@ namespace FastKart.Data.EntitiesConfiguration
                 .WithMany(R => R.Owners);
 
             // CreatedRoles
-            UserEntity.HasMany(U => U.Roles)
+            UserEntity.HasMany(U => U.CreatedRoles)
                 .WithOne(R => R.Auther);
 
             // CreatedBlogs
