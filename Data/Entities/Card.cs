@@ -8,6 +8,7 @@
         public User User { get; set; }
         public string Code { get; set; }
         public string Password { get; set; }
-        public PayementMethod payementMethod { get; set; }
+        public string PaymentMethodName { get; set; }
+        public paymentMethod paymentMethod { get; set; }
     }
 }

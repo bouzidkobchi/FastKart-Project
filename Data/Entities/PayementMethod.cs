@@ -1,8 +1,8 @@
 ﻿namespace FastKart.Data.Entities
 {
-    public class PayementMethod
+    public class paymentMethod
     {
-        public int Id { get; set; }
         public string Name { get; set; }
+        public List<Card> Cards { get; set; }
     }
 }

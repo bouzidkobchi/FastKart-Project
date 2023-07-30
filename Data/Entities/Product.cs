@@ -11,11 +11,11 @@ namespace FastKart.Data.Entities
         public float CurrentPrice { get; set; }
         public string CategoryName { get; set; }
         public Category Category { get; set; }
-        public int BrandId { get; set; }
+        public string BrandName { get; set; }
         public Brand Brand { get; set; }
         public string FormName { get; set; }
         public Form Form { get; set; }
-        public int StoreId { get; set; }
+        public string StoreName { get; set; }
         public Store Store { get; set; }
         public string PackageInfo { get; set; }
         public string ManufactorName { get; set; }
@@ -25,7 +25,7 @@ namespace FastKart.Data.Entities
         public decimal Amount { get; set; }
         public ProductStatus Status { get; set; }
         public float NetPrice { get; set; }
-        public List<Media> ProductsPictures { get; set; }
+        public List<Media> ProductPictures { get; set; }
         public List<User> Likers { get; set; }
         public List<Order> Orders { get; set; }
         public List<Rating> Ratings { get; set; }

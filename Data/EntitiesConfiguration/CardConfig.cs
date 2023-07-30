@@ -29,7 +29,7 @@ namespace FastKart.Data.EntitiesConfiguration
                 .HasMaxLength(30);
 
             // paymentMethod
-            CardEntity.HasOne(C => C.payementMethod);
+            CardEntity.HasOne(C => C.paymentMethod);
 
             return modelBuilder;
         }

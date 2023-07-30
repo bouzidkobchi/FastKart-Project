@@ -10,9 +10,10 @@ namespace FastKart.Data.EntitiesConfiguration
             var BrandEntity = modelBuilder.Entity<Brand>();
 
             // Name
-            BrandEntity.Property(B => B.Name)
-                .IsRequired()
-                .HasMaxLength(20);
+            BrandEntity.HasKey(B => B.Name);
+
+            BrandEntity.Property(b => b.Name)
+                .HasMaxLength(30);
 
             // Products
             BrandEntity.HasMany(B => B.Products)

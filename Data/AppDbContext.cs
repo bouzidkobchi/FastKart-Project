@@ -16,7 +16,7 @@ namespace FastKart.Data
         public DbSet<Manufactor> Manufactors { get; set; }
         public DbSet<Media> Media { get; set; }
         public DbSet<Order> Orders { get; set; }
-        public DbSet<PayementMethod> PayementMethods { get; set; }
+        public DbSet<paymentMethod> paymentMethods { get; set; }
         public DbSet<Product> Products { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<Store> Stores { get; set; }
@@ -48,8 +48,10 @@ namespace FastKart.Data
                 .AddFormEntity()
                 .AddManufactorEntity()
                 .AddOrderEntity()
+                .AddPaymentEntity()
                 .AddRatingEntity()
                 .AddRoleEntity()
+                .AddStoreEntity()
                 .AddUserEntity();
         }
 

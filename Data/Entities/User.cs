@@ -20,6 +20,7 @@
         public List<Media> Pictures { get; set; }
         public List<Rating> Ratings { get; set; }
         public List<Coupon> Coupons { get; set; }
+        public List<ToDo> ToDos { get; set; }
 
     }
 }
