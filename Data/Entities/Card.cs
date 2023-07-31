@@ -1,6 +1,5 @@
 ﻿namespace FastKart.Data.Entities
 {
-    // done
     public class Card
     {
         public int Id { get; set; }

@@ -109,7 +109,7 @@ namespace FastKart.Migrations
                     Title = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     SmallTitle = table.Column<string>(type: "TEXT", maxLength: 50, nullable: false),
                     Content = table.Column<string>(type: "TEXT", maxLength: 5000, nullable: false),
-                    WelpaperId = table.Column<int>(type: "INTEGER", nullable: false)
+                    WallpaperId = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -462,9 +462,9 @@ namespace FastKart.Migrations
                 column: "AutherId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Blogs_WelpaperId",
+                name: "IX_Blogs_WallpaperId",
                 table: "Blogs",
-                column: "WelpaperId");
+                column: "WallpaperId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Cards_Code",
@@ -624,9 +624,9 @@ namespace FastKart.Migrations
                 onDelete: ReferentialAction.Cascade);
 
             migrationBuilder.AddForeignKey(
-                name: "FK_Blogs_Media_WelpaperId",
+                name: "FK_Blogs_Media_WallpaperId",
                 table: "Blogs",
-                column: "WelpaperId",
+                column: "WallpaperId",
                 principalTable: "Media",
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);

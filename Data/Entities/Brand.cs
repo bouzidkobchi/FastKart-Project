@@ -1,6 +1,5 @@
 ﻿namespace FastKart.Data.Entities
 {
-    // done
     public class Brand
     {
         public int Id { get; set; }

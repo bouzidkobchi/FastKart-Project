@@ -77,14 +77,14 @@ namespace FastKart.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("WelpaperId")
+                    b.Property<int>("WallpaperId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AutherId");
 
-                    b.HasIndex("WelpaperId");
+                    b.HasIndex("WallpaperId");
 
                     b.ToTable("Blogs");
                 });
@@ -586,15 +586,15 @@ namespace FastKart.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("FastKart.Data.Entities.Media", "Welpaper")
+                    b.HasOne("FastKart.Data.Entities.Media", "Wallpaper")
                         .WithMany()
-                        .HasForeignKey("WelpaperId")
+                        .HasForeignKey("WallpaperId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Auther");
 
-                    b.Navigation("Welpaper");
+                    b.Navigation("Wallpaper");
                 });
 
             modelBuilder.Entity("FastKart.Data.Entities.BlogComment", b =>

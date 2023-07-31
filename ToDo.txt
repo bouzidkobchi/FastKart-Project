@@ -1,16 +1,20 @@
-﻿Not Finished Classes :
-	- Order
-	- Product
-	- Rating
-	- Role
-	- Store
-	- User
-	- PaymentMethod (Not Created Yet)
-	- WeightChoice (Not Created Yet)
+﻿Done :
 
-- All Enums (Not Created / Implemented Yet)
+	Not Finished Classes :
+		- Order
+		- Product
+		- Rating
+		- Role
+		- Store
+		- User
+		- PaymentMethod (Not Created Yet)
+		- WeightChoice (Not Created Yet)
 
-- Entities Configuration
+	- All Enums (Not Created / Implemented Yet)
+
+	- Entities Configuration
+
+you stoped at ICategoryRepository
 
 - Entities CRUD Extension Methods
 

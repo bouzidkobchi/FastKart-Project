@@ -1,6 +1,5 @@
 ﻿namespace FastKart.Data.Entities
 {
-    // done
     public class BlogComment
     {
         public int Id { get; set; }
