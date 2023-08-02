@@ -33,6 +33,11 @@ namespace FastKart.Data.Repositories
         {
             _context.Remove(item);
         }
+        public void Delete(int BrandId)
+        {
+            var Brand = _context.Brands.Find(BrandId);
+            Delete(Brand);
+        }
 
         public IEnumerable<Brand> Filter(Predicate<Brand> Condition)
         {
