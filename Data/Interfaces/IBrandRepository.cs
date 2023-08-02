@@ -1,23 +1,11 @@
 ﻿using FastKart.Data.Entities;
+using FastKart.Data.Interfaces.Shared;
 
 namespace FastKart.Data.Interfaces
 {
-    public interface IBrandRepository
+    public interface IBrandRepository : IBasicRepository<Brand>
     {
-        // Read :
-        int Count();
-        IEnumerable<Product> GetProductsPaginate(int Page , int PerPage);
-        IEnumerable<Product> GetProductsPaginate(int Page , int PerPage , Brand Brand);
-        IEnumerable<Product> GetProductsPaginate(int Page , int PerPage , int BrandId);
-        Dictionary<Brand, int> ProductPerBrand();
-
-        // Create :
-        int AddNewBrand(string BrandName); // return -1 if the brandName exists
-
-        // Delete :
-        void DeleteBrand(Brand brand);
-        void DeleteBrand(string brandName);
-
-
+        IEnumerable<Product>? GetProductsPaginate(int Page , int PageSize , Brand Brand);
+        IEnumerable<Product>? GetProductsPaginate(int Page , int PageSize , int BrandId);
     }
 }

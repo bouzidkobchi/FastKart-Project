@@ -11,6 +11,7 @@ namespace FastKart.Data
         public DbSet<Brand> Brands { get; set; }
         public DbSet<Card> Cards { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<BlogComment> Comments { get; set; }
         public DbSet<Coupon> Coupons { get; set; }
         public DbSet<Form> Forms { get; set; }
         public DbSet<Manufactor> Manufactors { get; set; }

@@ -1,4 +1,5 @@
-﻿using FastKart.Data.Interfaces;
+﻿using FastKart.Data.Entities;
+using FastKart.Data.Interfaces;
 
 namespace FastKart.Data.Repositories
 {

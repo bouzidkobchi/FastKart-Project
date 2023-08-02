@@ -1,36 +1,26 @@
 ﻿using FastKart.Data.Entities;
+using FastKart.Data.Interfaces.Shared;
 
 namespace FastKart.Data.Interfaces
 {
-    public interface IBlogRepository
+    public interface IBlogRepository : IBasicRepository<Blog>
     {
-        // Read Part :
-        int Count();
-        Blog GetById(int id);
-        Blog GetByName(User Auther , string BlogName);
-        IEnumerable<BlogComment> GetComments(int BlogId);
-        IEnumerable<BlogComment> GetComments(Blog Blog);
-        IEnumerable<BlogComment> GetCommentsPaginate(int BlogId , int Page , int PerPage);
-        IEnumerable<BlogComment> GetCommentsPaginate(Blog Blog , int Page , int PerPage);
-        IEnumerable<Blog> GetBlogsByCategory(string BlogCategoryName);
-        IEnumerable<Blog> GetBlogsByCategory(Category BlogCategory);
-        IEnumerable<Blog> GetBlogsByAuther(int BlogAutherId);
-        IEnumerable<Blog> GetBlogsByAuther(User BlogAuther);
-        Dictionary<BlogCategory, int> BlogsPerCategory();
-        IEnumerable<Blog> GetBlogsPaginate(int Page, int PerPage);
-        IEnumerable<Blog> GetBlogsSummaryPaginate(int Page, int PerPage); // return blogTitle , date , picture
+        Blog? GetById(int id);
+        Blog? GetByName(User Auther , string BlogName);
+        IEnumerable<BlogComment>? GetComments(int BlogId);
+        IEnumerable<BlogComment>? GetComments(Blog Blog);
+        IEnumerable<BlogComment>? GetCommentsPaginate(int BlogId , int Page , int PageSize);
+        IEnumerable<BlogComment>? GetCommentsPaginate(Blog Blog , int Page , int PageSize);
 
-        // Create Part :
-        int AddBlog(User Auther, string CategoryName, string Title, string SmallTitle, string Content, byte[] Wallpaper);
+        int AddComment(User Auther, Blog Blog, string Content);
+        int AddComment(User Auther, int BlogId, string Content);
 
-        // Update Part
-        void UpdateBlog(Blog Blog , string? NewTitle , string? NewSmallTitle , string? NewContent , string? NewCategoryName , byte[] NewWallpaper);
-        void UpdateBlog(int BlogId , string? NewTitle , string? NewSmallTitle , string? NewContent , string? NewCategoryName , byte[] NewWallpaper);
+        void DeleteComment(User Auther , int CommentId);
+        void DeleteComment(User Auther , BlogComment Comment);
 
-        // Delete Part
-        void DeleteBlog(int BlogId);
-        void DeleteBlog(Blog Blog);
-        void DeleteByName(User Auther , string BlogName);
+        void UpdateComment(User Auther, int CommentId , Action<BlogComment> action);
 
+        void ReplyOnComment(User Auther , BlogComment Comment, string ReplyContent);
+        void ReplyOnComment(User Auther , int CommentId, string ReplyContent);
     }
 }
