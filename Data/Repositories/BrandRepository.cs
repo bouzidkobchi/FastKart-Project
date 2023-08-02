@@ -28,11 +28,6 @@ namespace FastKart.Data.Repositories
         {
             return _context.Brands.Count();
         }
-        // to delete
-        public void Delete(Predicate<Brand>? Condition, int Count = 1)
-        {
-            throw new NotImplementedException();
-        }
 
         public void Delete(Brand item)
         {
