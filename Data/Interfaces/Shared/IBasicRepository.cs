@@ -21,7 +21,6 @@ namespace FastKart.Data.Interfaces.Shared
         void Update(T item , Action<T> action);
 
         // Delete :
-        void Delete(Predicate<T>? Condition , int Count = 1);
         void Delete(T item);
     }
 }

@@ -5,8 +5,6 @@ namespace FastKart.Data.Interfaces
 {
     public interface ICategoryRepository : IBasicRepository<Category>
     {
-        // Read :
-        Dictionary<Category, int> ProductPerCategory();
         IEnumerable<string> GetAllCategoryNames();
     }
 }

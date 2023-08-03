@@ -46,7 +46,7 @@ namespace FastKart.Data.Repositories
 
         public IEnumerable<Brand> FilterPage(Predicate<Brand> Condition, int page, int pageSize)
         {
-            return Filter(Condition).Skip(page).Take(pageSize);
+            return Filter(Condition).Skip(page * pageSize).Take(pageSize);
         }
 
         public IEnumerable<Brand> GetAll()
@@ -56,18 +56,18 @@ namespace FastKart.Data.Repositories
 
         public IEnumerable<Brand> GetPage(int page, int pageSize)
         {
-            return _context.Brands.Skip(page).Take(pageSize);
+            return _context.Brands.Skip(page * pageSize).Take(pageSize);
         }
 
         public IEnumerable<Product> GetProductsPaginate(int Page, int PageSize, Brand Brand)
         {
-            return Brand.Products.Skip(Page).Take(PageSize);
+            return Brand.Products.Skip(Page * PageSize).Take(PageSize);
         }
 
         public IEnumerable<Product> GetProductsPaginate(int Page, int PageSize, int BrandId)
         {
             var Brand = _context.Brands.Find(BrandId);
-            return Brand.Products.Skip(Page).Take(PageSize);
+            return Brand.Products.Skip(Page * PageSize).Take(PageSize);
         }
 
         public IEnumerable<TResult> Select<TResult>(Func<Brand, TResult> func)
@@ -77,7 +77,7 @@ namespace FastKart.Data.Repositories
 
         public IEnumerable<TResult> SelectPage<TResult>(Func<Brand, TResult> func, int page, int pageSize)
         {
-            return Select(func).Skip(page).Take(pageSize);
+            return Select(func).Skip(page * pageSize).Take(pageSize);
         }
 
         public void Update(Brand item, Action<Brand> action)

@@ -81,7 +81,7 @@ namespace FastKart.Data.Repositories
 
         public IEnumerable<Blog> FilterPage(Predicate<Blog> Condition, int page, int pageSize)
         {
-            return Filter(Condition).Skip(page).Take(pageSize);
+            return Filter(Condition).Skip(page * pageSize).Take(pageSize);
         }
 
         public IEnumerable<Blog> GetAll()
@@ -116,12 +116,12 @@ namespace FastKart.Data.Repositories
 
         public IEnumerable<BlogComment>? GetCommentsPaginate(Blog Blog, int Page, int PageSize)
         {
-            return GetComments(Blog)?.Skip(Page).Take(PageSize);
+            return GetComments(Blog)?.Skip(Page * PageSize).Take(PageSize);
         }
 
         public IEnumerable<Blog> GetPage(int page, int pageSize)
         {
-            return _context.Blogs.Skip(page).Take(pageSize);
+            return _context.Blogs.Skip(page * pageSize).Take(pageSize);
         }
 
         public void ReplyOnComment(User Auther, BlogComment Comment, string ReplyContent)
@@ -145,7 +145,7 @@ namespace FastKart.Data.Repositories
 
         public IEnumerable<TResult> SelectPage<TResult>(Func<Blog, TResult> func, int page, int pageSize)
         {
-            return Select(func).Skip(page).Take(pageSize);
+            return Select(func).Skip(page * pageSize).Take(pageSize);
         }
 
         public void Update(Blog item, Action<Blog> action)

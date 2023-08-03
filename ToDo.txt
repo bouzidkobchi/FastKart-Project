@@ -19,3 +19,6 @@ you stoped at ICategoryRepository
 - Entities CRUD Extension Methods
 
 - Configure Sqlite For Development / Sql Server for Production
+
+// notes :
+for category and form and manufactor the function add in each repository return integer (1 if it's correct / -1 if something happend);

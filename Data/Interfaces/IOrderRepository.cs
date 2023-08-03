@@ -1,6 +1,9 @@
-﻿namespace FastKart.Data.Interfaces
+﻿using FastKart.Data.Entities;
+using FastKart.Data.Interfaces.Shared;
+
+namespace FastKart.Data.Interfaces
 {
-    public interface IOrderRepository
+    public interface IOrderRepository : IBasicRepository<Order>
     {
     }
 }
