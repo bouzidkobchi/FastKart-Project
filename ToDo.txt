@@ -22,3 +22,5 @@ you stoped at ICategoryRepository
 
 // notes :
 for category and form and manufactor the function add in each repository return integer (1 if it's correct / -1 if something happend);
+
+the update function is unsecure .

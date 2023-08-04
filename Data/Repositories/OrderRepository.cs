@@ -37,37 +37,38 @@ namespace FastKart.Data.Repositories
 
         public IEnumerable<Order> Filter(Predicate<Order> Condition)
         {
-            throw new NotImplementedException();
+            return _context.Orders.Where(O => Condition(O));
         }
 
         public IEnumerable<Order> FilterPage(Predicate<Order> Condition, int page, int pageSize)
         {
-            throw new NotImplementedException();
+            return Filter(Condition).Skip(page * pageSize).Take(pageSize);
         }
 
         public IEnumerable<Order> GetAll()
         {
-            throw new NotImplementedException();
+            return _context.Orders;
         }
 
         public IEnumerable<Order> GetPage(int page, int pageSize)
         {
-            throw new NotImplementedException();
+            return _context.Orders.Skip(page * pageSize).Take(pageSize);
         }
 
         public IEnumerable<TResult> Select<TResult>(Func<Order, TResult> func)
         {
-            throw new NotImplementedException();
+            return _context.Orders.Select(O => func(O));
         }
 
         public IEnumerable<TResult> SelectPage<TResult>(Func<Order, TResult> func, int page, int pageSize)
         {
-            throw new NotImplementedException();
+            return Select(func).Skip(page * pageSize).Take(pageSize);
         }
 
         public void Update(Order item, Action<Order> action)
         {
-            throw new NotImplementedException();
+            action(item);
+            _context.SaveChanges();
         }
     }
 }
