@@ -1,8 +1,10 @@
 ﻿using FastKart.Data.Entities;
 using FastKart.Data.Interfaces;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FastKart.Data.Repositories
 {
+    [NotMapped]
     public class OrderRepository : IOrderRepository
     {
         private readonly AppDbContext _context;

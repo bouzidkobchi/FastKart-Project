@@ -61,3 +61,10 @@ C:\Users\bouzid\Desktop\FastKart\bin\Debug\net6.0\runtimes\win-arm64\native\e_sq
 C:\Users\bouzid\Desktop\FastKart\bin\Debug\net6.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\bouzid\Desktop\FastKart\bin\Debug\net6.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\Users\bouzid\Desktop\FastKart\obj\Debug\net6.0\FastKart.csproj.CopyComplete
+C:\Users\bouzid\Desktop\FastKart\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\bouzid\Desktop\FastKart\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\bouzid\Desktop\FastKart\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\bouzid\Desktop\FastKart\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\bouzid\Desktop\FastKart\obj\Debug\net6.0\FastKart.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\bouzid\Desktop\FastKart\bin\Debug\net6.0\FastKart.xml
+C:\Users\bouzid\Desktop\FastKart\obj\Debug\net6.0\FastKart.xml

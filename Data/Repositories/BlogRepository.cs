@@ -1,10 +1,15 @@
 ﻿using FastKart.Data.Entities;
 using FastKart.Data.Interfaces;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FastKart.Data.Repositories
 {
     public class BlogRepository : IBlogRepository
     {
+        //private static AppDbContext _context
+        //{
+        //    get => new AppDbContext();
+        //}
         private readonly AppDbContext _context;
         public BlogRepository(AppDbContext context) 
         {

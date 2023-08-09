@@ -43,6 +43,7 @@ namespace FastKart.Data
                 .AddAddressEntity()
                 .AddBlogCommentEntity()
                 .AddBlogEntity()
+                .AddBlogCategoryEntity()
                 .AddBrandEntity()
                 .AddCardEntity()
                 .AddCategoryEntity()
