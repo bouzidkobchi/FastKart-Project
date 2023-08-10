@@ -93,9 +93,9 @@ namespace FastKart.Data.Repositories
             return Select(func).Skip(page * pageSize).Take(pageSize);
         }
 
-        public void Update(Manufactor item, Action<Manufactor> action)
+        public void Update(Manufactor item)
         {
-            action(item);
+            _context.Update(item);
             _context.SaveChanges();
         }
     }

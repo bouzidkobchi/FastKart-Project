@@ -67,9 +67,9 @@ namespace FastKart.Data.Repositories
             return Select(func).Skip(page * pageSize).Take(pageSize);
         }
 
-        public void Update(Product item, Action<Product> action)
+        public void Update(Product item)
         {
-            action(item);
+            _context.Update(item);
             _context.SaveChanges();
         }
     }

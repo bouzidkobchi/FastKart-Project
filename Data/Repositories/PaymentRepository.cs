@@ -75,9 +75,9 @@ namespace FastKart.Data.Repositories
             return Select(func).Skip(page * pageSize).Take(pageSize);
         }
 
-        public void Update(paymentMethod item, Action<paymentMethod> action)
+        public void Update(paymentMethod item)
         {
-            action(item);
+            _context.Update(item);
             _context.SaveChanges();
         }
     }

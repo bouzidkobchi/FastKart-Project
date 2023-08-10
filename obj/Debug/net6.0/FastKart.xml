@@ -4,19 +4,5 @@
         <name>FastKart</name>
     </assembly>
     <members>
-        <member name="T:FastKart.Api.UserController">
-            <summary>
-            user controller
-            </summary>
-        </member>
-        <member name="M:FastKart.Api.UserController.Index">
-            <summary>
-            show a test user
-            </summary>
-            <remarks>
-            documentation ...
-            new line ..
-            </remarks>
-        </member>
     </members>
 </doc>

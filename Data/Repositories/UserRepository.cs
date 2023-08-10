@@ -13,6 +13,11 @@ namespace FastKart.Data.Repositories
             _context = context;
         }
 
+        public User? GetById(int UserId)
+        {
+            return _context.Users.FirstOrDefault(U => U.Id == UserId);
+        }
+
         public int Add(User item)
         {
             _context.Add(item);
@@ -34,6 +39,13 @@ namespace FastKart.Data.Repositories
         public void Delete(User item)
         {
             _context.Remove(item);
+            _context.SaveChanges();
+        }
+
+        public void Delete(int UserId)
+        {
+            var deletedUser = _context.Users.First(U => U.Id == UserId);
+            _context.Users.Remove(deletedUser);
             _context.SaveChanges();
         }
 
@@ -67,9 +79,9 @@ namespace FastKart.Data.Repositories
             return Select(func).Skip(page * pageSize).Take(pageSize);
         }
 
-        public void Update(User item, Action<User> action)
+        public void Update(User item)
         {
-            action(item);
+            _context.Users.Update(item);
             _context.SaveChanges();
         }
     }

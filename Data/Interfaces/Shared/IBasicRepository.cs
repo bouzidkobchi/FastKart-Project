@@ -18,7 +18,7 @@ namespace FastKart.Data.Interfaces.Shared
         void AddRange(IEnumerable<T> items);
 
         // Update :
-        void Update(T item , Action<T> action);
+        void Update(T item);
 
         // Delete :
         void Delete(T item);
