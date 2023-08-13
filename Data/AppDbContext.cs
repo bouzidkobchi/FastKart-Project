@@ -53,6 +53,7 @@ namespace FastKart.Data
                 .AddManufactorEntity()
                 .AddOrderEntity()
                 .AddPaymentEntity()
+                .AddProductEntity()
                 .AddRatingEntity()
                 .AddRoleEntity()
                 .AddStoreEntity()
