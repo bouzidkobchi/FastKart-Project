@@ -67,9 +67,9 @@ namespace FastKart.Api
         {
             var users = new
             {
-                usersByUsername = Repo.Filter(U => U.UserName.Contains(keyword)),
-                usersByEmail = Repo.Filter(U => U.Email.Contains(keyword)),
-                usersByPhone = Repo.Filter(U => U.Phone.Contains(keyword)),
+                usersByUsername = Repo.Filter(U => U.UserName.Split(' ').Contains(keyword)).ToList()
+                //usersByEmail = Repo.Filter(U => U.Email.Contains(keyword)),
+                //usersByPhone = Repo.Filter(U => U.Phone.Contains(keyword)),
             };
 
             return Json(users);
