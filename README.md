@@ -16,7 +16,7 @@ Fastkart is an innovative online platform designed to revolutionize the way food
 ## Database Schema:
 The foundation of Fastkart's operations lies in its comprehensive database schema. The database is designed using Entity Framework, an object-relational mapping (ORM) framework that simplifies database interactions. Here's a glimpse of the database schema:
 
-![Project Logo](GitHub/FastKart-Daigram.svg)
+![Project Logo](GitHub/FastKart-Diagram.svg)
 
 ## Database Schema Implementation ( Classes & Models ) :
 Fastkart's robust database schema is the backbone of its efficient operations. Each class within the schema is meticulously designed to capture essential data points, ensuring seamless functionality and accurate information management.
